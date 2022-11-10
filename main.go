@@ -12,8 +12,7 @@ func main() {
 	tgbotToken := os.Getenv("BOT_TOKEN")
 
 	if tgbotToken == "" {
-		log.Printf("No BOT_TOKEN Found! Exiting..")
-		os.Exit(1)
+		log.Fatal("No BOT_TOKEN Found! Exiting..")
 	}
 
 	bot, err := tgbotapi.NewBotAPI(tgbotToken)
