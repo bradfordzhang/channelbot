@@ -1,4 +1,4 @@
-module zycbot
+module zycschannelbot
 
 go 1.19
 

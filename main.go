@@ -51,6 +51,13 @@ func main() {
 
 				bot.Send(msg)
 			}
+
+			if strings.Contains(update.Message.Text, "机场") {
+				msg := tgbotapi.NewMessage(update.Message.Chat.ID, "自用机场推荐: https://s.zyc.name/AUIoQWV/")
+				msg.ReplyToMessageID = update.Message.MessageID
+
+				bot.Send(msg)
+			}
 		}
 	}
 }

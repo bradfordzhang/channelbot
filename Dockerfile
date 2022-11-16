@@ -8,6 +8,6 @@ COPY go.mod .
 
 COPY go.sum .
 
-RUN  go build -o zycschannelbot main.go
+RUN  go build
 
 CMD ["./zycschannelbot"]
