@@ -49,8 +49,6 @@ func main() {
 				msg.Text = "I'm zyc's channel bot.\nSource code: https://github.com/bradfordzhang/channelbot/"
 			case "status":
 				msg.Text = "I'm ok!"
-			default:
-				msg.Text = "未知指令"
 			}
 
 			if _, err := bot.Send(msg); err != nil {
