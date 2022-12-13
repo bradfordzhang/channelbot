@@ -57,15 +57,6 @@ func main() {
 			continue
 		}
 
-		if strings.Contains(update.Message.Text, "官网") {
-			msg := tgbotapi.NewMessage(update.Message.Chat.ID, "网址： https://www.fishport.cyou\n点击右侧 \"Buy it now\" 即可")
-			msg.ReplyToMessageID = update.Message.MessageID
-
-			if _, err := bot.Send(msg); err != nil {
-				log.Panic(err)
-			}
-		}
-
 		if strings.Contains(update.Message.Text, "截图") {
 			msg := tgbotapi.NewPhoto(update.Message.Chat.ID, tgbotapi.FileURL("https://raw.githubusercontent.com/bradfordzhang/res/main/%E6%88%AA%E5%9B%BE.jpg"))
 			msg.ReplyToMessageID = update.Message.MessageID
@@ -84,13 +75,13 @@ func main() {
 			}
 		}
 
-		if strings.Contains(update.Message.Text, "机场") {
+		/*if strings.Contains(update.Message.Text, "机场") {
 			msg := tgbotapi.NewMessage(update.Message.Chat.ID, "自用机场推荐: https://s.zyc.name/AUIoQWV/")
 			msg.ReplyToMessageID = update.Message.MessageID
 
 			if _, err := bot.Send(msg); err != nil {
 				log.Panic(err)
 			}
-		}
+		}*/
 	}
 }
